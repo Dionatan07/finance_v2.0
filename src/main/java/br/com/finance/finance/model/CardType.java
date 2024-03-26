@@ -2,19 +2,19 @@ package br.com.finance.finance.model;
 
 public class CardType {
 
-    private Integer id;
+    private Long id;
     private String type;
 
-    public CardType(Integer id, String type) {
+    public CardType(Long id, String type) {
         this.id = id;
         this.type = type;
     }
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

@@ -2,19 +2,19 @@ package br.com.finance.finance.model;
 
 public class IssuingBank {
 
-    private Integer id;
+    private Long id;
     private String bankName;
 
-    public IssuingBank(Integer id, String bankName) {
+    public IssuingBank(Long id, String bankName) {
         this.id = id;
         this.bankName = bankName;
     }
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

@@ -1,18 +1,42 @@
 package br.com.finance.finance.model;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+
 import java.util.Date;
 
+@Entity
+@Table(name = "credit_card")
 public class CreditCard {
 
+    @Id
     private Long id;
-    private CardType cardType;
-    private IssuingBank issuingBank;
+
+    //private CardType cardType;
+    //private IssuingBank issuingBank;
+
+    @Column(name = "card_identifier", nullable = false, length = 100)
     private String cardIdentifier;
+
+    @Column(name = "limit", nullable = false, length = 8)
     private Double limit;
+
+    @Column(name = "closing_date", nullable = false, length = 100)
     private Date closingDate;
+
+    @Column(name = "due_date", nullable = false, length = 100)
     private Date dueDate;
+
+    @Column(name = "last_for_digits", nullable = false, length = 4)
     private Integer lastFourDigits;
+
+    @Column(name = "cvv", nullable = false, length = 3)
     private Integer cvv;
+
+    @Column(name = "expiration_date", nullable = false, length = 100)
     private Date expirationDate;
 
     public CreditCard() {
@@ -25,22 +49,22 @@ public class CreditCard {
     public void setId(Long id) {
         this.id = id;
     }
-
-    public CardType getCardType() {
-        return cardType;
-    }
-
-    public void setCardType(CardType cardType) {
-        this.cardType = cardType;
-    }
-
-    public IssuingBank getIssuingBank() {
-        return issuingBank;
-    }
-
-    public void setIssuingBank(IssuingBank issuingBank) {
-        this.issuingBank = issuingBank;
-    }
+//
+//    public CardType getCardType() {
+//        return cardType;
+//    }
+//
+//    public void setCardType(CardType cardType) {
+//        this.cardType = cardType;
+//    }
+//
+//    public IssuingBank getIssuingBank() {
+//        return issuingBank;
+//    }
+//
+//    public void setIssuingBank(IssuingBank issuingBank) {
+//        this.issuingBank = issuingBank;
+//    }
 
     public String getCardIdentifier() {
         return cardIdentifier;
